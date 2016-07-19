@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>My Portfolio</title>
+<script>
+alert("Hello World! My name Shreya, and this is my Portfolio!!!")
+function change_image() {
+        var image = document.getElementById("picture");
+	    if (image.alt == "Python Runner Game Project" ) {
+        image.src = "Python2.png";
+		image.alt = "Picture 2";
+		}   
+	    else {
+		image.src = "Screenshot.png";
+		image.alt = "Python Runner Game Project";
+		}
+}	
+</script>
+</head>
+<body h2 style="background-color:#FFB6C1;color:light pink">
+<h2>My Python Project</h2>
+	<img id = "picture" src="Screenshot.png" alt="Python Runner Game Project" style="width:500px;height:252px;" >
+	<button id="btn" onclick ="change_image()">Click me!</button>
+
+  <ul>
+    <a href="partofportfolio.html">About me</a>
+  </ul>
+
+<font face="Arial Black" color="blue">This is a snippet of the runner game project that we created in class in the third week of Girls Who Code. It was challenging at first, but we finally conquered it!</font>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style style="text/css">
+.marquee {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.marquee p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: scroll-left 5s linear infinite;
+ -webkit-animation: scroll-left 5s linear infinite;
+ animation: scroll-left 5s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
+}
+</style>
+
+
+<style>
+body {
+    background-color: #85c9a9;
+}
+
+h1 {
+    color: #668484;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-align: center;
+} 
+p  {
+    color: #194747;
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 20px;
+}
+
+</style>
+  </head>
+  <body>
+    <div class="container">
+    </div>
+	  <div class="jumbotron">
+    <h1>My Portfolio</h1> 
+    <p>By:Shreya S.</p> 
+  </div>
+  </div>
+  <!NAV BAR>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">HOME</a></li>
+      <li><a href="Python.html">Python</a></li>
+      <li><a href="Scratch.html">Scratch</a></li>
+	  <li><a href="#">Robotics</a></li>
+	  <li><a href="Map.html">Map</a></li>
+    </ul>
+  </div>
+</nav>
+<!ABOUT ME>
+  <p>ABOUT ME</p> 
+  <p>My name is Shreya. I am a divergent, shadowhunter, timelord who loves The Flash, Arrow, Sherlock, The Red Queen, Harry Potter, and many more!!! I am in an awesome program called Girls Who Code where I have learned how to code using Python, HTML, CSS, Java Script, Scratch, and C++ for robots.</p> 
+	 <img src="girlswhocode.png" onmouseover="this.width='206'; this.height='167'" onmouseout="this.width='156'; this.height='117'">
+    <div class="Basic Well">My Portfolio</div>
+  </body>
+</html>

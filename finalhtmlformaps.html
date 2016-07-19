@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Transit layer</title>
+    
+    <style>
+	body {
+    background-color: #797D7F;
+}
+
+h1 {
+    color: #F2F3F4;
+    margin-left: 40px;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	text-align: center;
+} 
+p  {
+    color: #F2F3F4;
+	margin-left: 10px;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size: 20px;
+}
+h2 {
+    color: black;
+	margin-left: 10px;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+h3 {
+    color: #979A9A  ;
+	margin-left: 10px;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size: 20px;
+}
+li {
+    color: #000000  ;
+	margin-left: 10px;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size: 20px;
+}
+.navbar-nav>li:hover{
+    color: #333;
+    background-color:#ABB2B9;
+    }
+footer { 
+    display: block;
+	background-color: black;
+}
+      #map {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+	<body background="background7.jpg">
+  </head>
+  <body>
+   <div class="container">
+    </div>
+	  <div class="jumbotron">
+         <h1>PUBLIC TRANSPORT MAP</h1> 
+    <h2>By:Radha & Shreya</h2> 
+  </div>
+  <!NAV BAR>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Global Warming</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="finalproject.html">About</a></li>
+      <li><a href="MoreInfo.html">More Info</a></li>
+	  <li><a href="activities.html">Activities</a></li>
+	  <li><a href="donate.html">Help...</a></li>
+	  <li><a href="finalhtmlformaps.html">Public Transport Map</a></li>
+	  <li><a href="Comments.html">Comments</a></li>
+	  <li><a href="sources html.html">Sources</a></li>
+    </ul>
+  </div>
+  <!MAP CODE>
+</nav>
+    <h1>Find Your Local Public Transport</h1>
+<p>Latitude:</p> <input type="text" id="lat">
+
+<p>Longitude:</p> <input type="text" id="long">
+<p> Input latitude and longitude of your city to search for the nearest public transportation. </p>
+
+<button onclick="myFunction()">Try it</button>
+      <script>
+	  var mapDiv, map
+   
+	function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 51.501904, lng: -0.115871}
+        });
+
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+      }
+	function myFunction() {
+        map.setCenter({lat: parseInt(document.getElementById('lat').value), lng: parseInt(document.getElementById('long').value)}); 
+               }
+</script>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeiL8L-NGH5VFy-EPVTjvKOypmCftkHo&callback=initMap&callback=initMap">
+    </script>
+   
+<div id="map"></div>
+ </body>
+</html>
